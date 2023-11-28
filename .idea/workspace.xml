@@ -4,14 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="366ca40e-d515-46f9-9fc6-cb7ba5121c4d" name="Changes" comment="" />
+    <list default="true" id="366ca40e-d515-46f9-9fc6-cb7ba5121c4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Selenium/Selenium.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/assignment1/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/assignment1/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/FileRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/FileRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LocationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LocationInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/CheckingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/CheckingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/SavingsAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/BankName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/BankName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/AccountNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/InsufficientFundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/InsufficientFundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/InvalidAmountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/InvalidAmountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/NegativeAmountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/NegativeAmountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/WithdrawalAmountExceedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/exceptions/WithdrawalAmountExceedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/loan/PersonalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/loan/PersonalLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Iwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Iwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/transactions/Payments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/transactions/Payments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/1.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
@@ -26,10 +70,55 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "C:/Users/baran/IdeaProjects/laba-solvd-project2/src/main/java/com/solvd/Main.java"
+    "last_opened_file_path": "C:/Users/baran/IdeaProjects/laba-solvd-project2/src/main/resources",
+    "onboarding.tips.debug.path": "C:/Users/baran/IdeaProjects/laba-solvd-project2/src/main/java/com/solvd/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\baran\IdeaProjects\laba-solvd-project2\src\main\resources" />
+      <recent name="C:\Users\baran\IdeaProjects\laba-solvd-project2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FileRead">
+    <configuration name="FileRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solvd.bankproject.FileRead" />
+      <module name="laba-solvd-project2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solvd.bankproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solvd.bankproject.Main" />
+      <module name="laba-solvd-project2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solvd.bankproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileRead" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,16 +129,5 @@
       <updated>1701152271604</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/solvd/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

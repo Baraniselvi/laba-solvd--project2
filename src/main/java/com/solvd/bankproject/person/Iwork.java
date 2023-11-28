@@ -1,2 +1,5 @@
-package com.solvd.bankproject.person;public class Iwork {
+package com.solvd.bankproject.person;
+
+public interface Iwork {
+    void work();
 }

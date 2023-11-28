@@ -1,2 +1,5 @@
-package com.solvd.bankproject.transactions;public class Payments {
+package com.solvd.bankproject.transactions;
+
+public interface Payments {
+    void makePayment();
 }

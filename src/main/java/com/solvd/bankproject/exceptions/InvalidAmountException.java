@@ -1,2 +1,7 @@
-package com.solvd.bankproject.exceptions;public class InvalidAmountException {
+package com.solvd.bankproject.exceptions;
+
+public class InvalidAmountException extends Exception {
+    public InvalidAmountException(String message) {
+        super(message);
+    }
 }
