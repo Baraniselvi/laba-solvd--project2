@@ -3,8 +3,8 @@ package com.solvd.bankproject;
 import com.solvd.bankproject.accounts.Account;
 import com.solvd.bankproject.accounts.CheckingAccount;
 import com.solvd.bankproject.accounts.SavingsAccount;
-import com.solvd.bankproject.bank.Bank;
 import com.solvd.bankproject.bank.BankName;
+import com.solvd.bankproject.bank.BankOperations;
 import com.solvd.bankproject.exceptions.AccountNotFoundException;
 import com.solvd.bankproject.exceptions.InsufficientFundException;
 import com.solvd.bankproject.exceptions.InvalidAmountException;
@@ -12,15 +12,11 @@ import com.solvd.bankproject.exceptions.NegativeAmountException;
 import com.solvd.bankproject.loan.PersonalLoan;
 import com.solvd.bankproject.person.Customer;
 import com.solvd.bankproject.person.Employee;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -30,8 +26,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
-
         logger.info("Bank Project");
 
         Account account = new Account("34444", 4555555, 444444);
@@ -39,7 +33,7 @@ public class Main {
         account.getBalance();
         account.accountIDValidation();
 
-        ArrayList<Customer> customers = new ArrayList<Customer>();
+        List<Customer> customers = new ArrayList<Customer>();
         Customer customer1 = new Customer("sam", "  victor", new ArrayList<>(), new ArrayList<>());
         customer1.getAccounts();
         customer1.getTransactions();
@@ -52,7 +46,7 @@ public class Main {
         bankNames.add(bankName1);
 
 
-        ArrayList<Employee> employee = new ArrayList<Employee>();
+        List<Employee> employee = new ArrayList<Employee>();
         Employee employee1 = new Employee("John", " Mathew ", new Location("Neenah", "USA", "34444444443"), "Process Executive", 567777);
         employee.add(employee1);
         employee1.setLocation(new Location("Neenah", "USA", "34444444443"));
@@ -124,8 +118,61 @@ public class Main {
         }
 
 
+        BankOperations.depositOperation.accept(3000.6);
+        BankOperations.generateTransactionID.get();
+        BankOperations.calucalateInterest.apply(5.7);
+        BankOperations.withDrawalOperation.accept(500.0);
+        BankOperations.getCurrentBalance.get();
+
+        System.out.println("Currency Accepted :" + Currency.EUR);
+        System.out.println("Currency Accepted :" + Currency.USD);
+        System.out.println("Currency Accepted :" + Currency.INR);
+
+        System.out.println("Transaction status :" + TransactionStatus.COMPLETED);
+
+        System.out.println(LoanStatus.APPROVED.loanStatusInfo());
+        System.out.println(LoanStatus.PENDING.loanStatusInfo());
+        System.out.println(LoanStatus.REJECTED.loanStatusInfo());
+
+        System.out.println("Transaction Card Type :" + CardType.CREDIT);
+
+
+        CreditCardApprovalFunction<Double> CreditApproval = creditScore ->
+                creditScore >= 700;
+
+        double customerCreditsCORE = 750;
+        System.out.println("Credit Approval :" + CreditApproval.approveCredit(customerCreditsCORE));
+
+
+        LoanEligibiltyFunction<Double> loanEligibilty = (income, CreditScore) ->
+                income > 50000 && CreditScore >= 650;
+        double customerIncome = 60000;
+        double customerCreditScore = 200;
+        System.out.println("Loan Eligibility :" + loanEligibilty.checkLoanEligibility(customerIncome, customerCreditScore));
+
+        TransactionApprovalFunction<Double> transactionApproval = amount -> amount <= 10000;
+        double transactionAmount = 300000;
+        System.out.println("Transaction Approval :" + transactionApproval.approveTransaction(transactionAmount));
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

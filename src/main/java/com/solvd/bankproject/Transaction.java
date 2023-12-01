@@ -1,5 +1,7 @@
 package com.solvd.bankproject;
 
+import com.solvd.bankproject.bank.BankOperations;
+
 public class Transaction {
     private double balance;
 

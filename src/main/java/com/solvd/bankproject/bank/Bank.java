@@ -5,18 +5,19 @@ import com.solvd.bankproject.person.Customer;
 import com.solvd.bankproject.person.Employee;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Bank {
     private ArrayList<BankName> bankname;
     ;
-    private ArrayList<Customer> customer;
+    private List<Customer> customer;
 
     private ArrayList<Location> location;
 
-    private ArrayList<Employee> employee;
+    private List<Employee> employee;
 
 
-    public Bank(ArrayList<BankName> bankname, ArrayList<Customer> customer, ArrayList<Location> location, ArrayList<Employee> employee) {
+    public Bank(ArrayList<BankName> bankname, List<Customer> customer, ArrayList<Location> location, List<Employee> employee) {
         this.bankname = bankname;
         this.customer = customer;
         this.location = location;
@@ -31,11 +32,11 @@ public class Bank {
         this.bankname = bankname;
     }
 
-    public ArrayList<Customer> getCustomer() {
+    public List<Customer> getCustomer() {
         return customer;
     }
 
-    public void setCustomer(ArrayList<Customer> customer) {
+    public void setCustomer(List<Customer> customer) {
         this.customer = customer;
     }
 
@@ -47,11 +48,11 @@ public class Bank {
         this.location = location;
     }
 
-    public ArrayList<Employee> getEmployee() {
+    public List<Employee> getEmployee() {
         return employee;
     }
 
-    public void setEmployee(ArrayList<Employee> employee) {
+    public void setEmployee(List<Employee> employee) {
         this.employee = employee;
     }
 }
