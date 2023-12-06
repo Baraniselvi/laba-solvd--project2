@@ -4,22 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="366ca40e-d515-46f9-9fc6-cb7ba5121c4d" name="Changes" comment="strong utils commit">
+    <list default="true" id="366ca40e-d515-46f9-9fc6-cb7ba5121c4d" name="Changes" comment="lambda and enum">
       <change afterPath="$PROJECT_DIR$/../Selenium/Selenium.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CardType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CreditCardApprovalFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LoanEligibiltyFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LoanStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionApprovalFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/BankOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CardType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/enums/CardType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CreditCardApprovalFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/CreditCardApprovalFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/enums/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/FileRead.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LoanEligibiltyFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/LoanEligibiltyFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LoanStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/enums/LoanStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/LocationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/LocationInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionApprovalFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/TransactionApprovalFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/interfaces/TransactionLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/TransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/enums/TransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/accounts/SavingsAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/BankName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/bank/BankName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/loan/PersonalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bankproject/loan/PersonalLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/1.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +52,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -75,6 +86,9 @@
       <recent name="C:\Users\baran\IdeaProjects\laba-solvd-project2\src\main\resources" />
       <recent name="C:\Users\baran\IdeaProjects\laba-solvd-project2" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.solvd.bankproject.interfaces" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="FileRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -82,7 +96,7 @@
       <module name="laba-solvd-project2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.solvd.bankproject.*" />
+          <option name="PATTERN" value="com.solvd.bankproject.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,7 +109,7 @@
       <module name="laba-solvd-project2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.solvd.bankproject.*" />
+          <option name="PATTERN" value="com.solvd.bankproject.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +141,36 @@
       <option name="project" value="LOCAL" />
       <updated>1701181210151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lambda and enum">
+      <option name="closed" value="true" />
+      <created>1701406466008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701406466008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="strong utils commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="strong utils commit" />
+    <MESSAGE value="lambda and enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="lambda and enum" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/solvd/bankproject/Main.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

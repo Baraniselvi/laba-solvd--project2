@@ -1,4 +1,4 @@
-package com.solvd.bankproject;
+package com.solvd.bankproject.interfaces;
 
 public interface LocationInterface {
     String getLocationInfo();

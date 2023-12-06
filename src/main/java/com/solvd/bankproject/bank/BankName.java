@@ -15,7 +15,7 @@ public class BankName {
         this.name = name;
     }
 
-    final void WelcomeMessage() {
+    public final void WelcomeMessage() {
         System.out.println("Welcome to Chase bank");
     }
 }

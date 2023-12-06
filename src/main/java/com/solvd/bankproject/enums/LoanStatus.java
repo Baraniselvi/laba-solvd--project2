@@ -1,4 +1,4 @@
-package com.solvd.bankproject;
+package com.solvd.bankproject.enums;
 
 public enum LoanStatus {
     APPROVED("Approved", true),

@@ -5,9 +5,11 @@ import com.solvd.bankproject.person.Customer;
 import com.solvd.bankproject.person.Employee;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class Bank {
+public class Bank implements BankOperations {
     private ArrayList<BankName> bankname;
     ;
     private List<Customer> customer;

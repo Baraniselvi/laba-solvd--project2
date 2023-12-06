@@ -1,17 +1,24 @@
 package com.solvd.bankproject.loan;
 
+import com.solvd.bankproject.Location;
+import com.solvd.bankproject.bank.Bank;
 import com.solvd.bankproject.bank.BankName;
+import com.solvd.bankproject.person.Customer;
+import com.solvd.bankproject.person.Employee;
 
-public class PersonalLoan extends BankName {
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+public class PersonalLoan extends Bank {
     private double balance;
 
     private double interestrate;
 
-    public PersonalLoan(String name, double balance, double interestrate) {
-        super(name);
-        this.balance = balance;
-        this.interestrate = interestrate;
+    public PersonalLoan(ArrayList<BankName> bankname, List<Customer> customer, ArrayList<Location> location, List<Employee> employee) {
+        super(bankname, customer, location, employee);
     }
+
 
     public double getBalance() {
         return balance;

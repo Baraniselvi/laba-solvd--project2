@@ -1,6 +1,7 @@
 package com.solvd.bankproject;
 
-public interface CustomerService {
+public interface
+CustomerService {
     void reportLostorStolencard();
 
     void requestNewDebitcard();

@@ -1,6 +1,6 @@
 package com.solvd.bankproject.accounts;
 
-import com.solvd.bankproject.TransactionLog;
+import com.solvd.bankproject.interfaces.TransactionLog;
 import com.solvd.bankproject.exceptions.*;
 import com.solvd.bankproject.person.Person;
 import com.solvd.bankproject.transactions.Payments;

@@ -1,5 +1,7 @@
 package com.solvd.bankproject;
 
+import com.solvd.bankproject.interfaces.LocationInterface;
+
 public class Location implements LocationInterface {
     private String city;
 

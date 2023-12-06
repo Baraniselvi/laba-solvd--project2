@@ -5,18 +5,36 @@ import com.solvd.bankproject.accounts.CheckingAccount;
 import com.solvd.bankproject.accounts.SavingsAccount;
 import com.solvd.bankproject.bank.BankName;
 import com.solvd.bankproject.bank.BankOperations;
+import com.solvd.bankproject.enums.CardType;
+import com.solvd.bankproject.enums.Currency;
+import com.solvd.bankproject.enums.LoanStatus;
+import com.solvd.bankproject.enums.TransactionStatus;
 import com.solvd.bankproject.exceptions.AccountNotFoundException;
 import com.solvd.bankproject.exceptions.InsufficientFundException;
 import com.solvd.bankproject.exceptions.InvalidAmountException;
 import com.solvd.bankproject.exceptions.NegativeAmountException;
+import com.solvd.bankproject.interfaces.CreditCardApprovalFunction;
+import com.solvd.bankproject.interfaces.LoanEligibiltyFunction;
+import com.solvd.bankproject.interfaces.TransactionApprovalFunction;
 import com.solvd.bankproject.loan.PersonalLoan;
 import com.solvd.bankproject.person.Customer;
 import com.solvd.bankproject.person.Employee;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.LocalTime;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.time.LocalDate;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 public class Main {
@@ -26,37 +44,45 @@ public class Main {
     public static void main(String[] args) {
 
 
-        logger.info("Bank Project");
+        logger.info("**********Bank Project************ ");
 
-        Account account = new Account("34444", 4555555, 444444);
-        account.getAccountID();
-        account.getBalance();
-        account.accountIDValidation();
+        System.out.println();
+        BankName bankNames1 = new BankName("Chase");
+        bankNames1.getName();
+        bankNames1.WelcomeMessage();
 
+
+        System.out.println();
         List<Customer> customers = new ArrayList<Customer>();
-        Customer customer1 = new Customer("sam", "  victor", new ArrayList<>(), new ArrayList<>());
+        Customer customer1 = new Customer("sam", "  victor", new ArrayList<Account>(), new ArrayList<Transaction>());
+        customers.add(customer1);
+
+        customer1.getFullNAME();
         customer1.getAccounts();
         customer1.getTransactions();
-        customer1.getFullNAME();
-        System.out.println("Customer info :" + customer1.getFullNAME() + customer1.getAccounts() + customer1.getTransactions());
+        logger.info("Customer info :" + customer1.getFullNAME() + customer1.getAccounts() + customer1.getTransactions());
 
 
-        ArrayList<BankName> bankNames = new ArrayList<BankName>();
-        BankName bankName1 = new BankName("Chase Bank");
-        bankNames.add(bankName1);
+        System.out.println();
+        Account account = new Account("34444", 4555555, 444444);
+        account.setAccountID("34444");
+
+        logger.info(" Validate AccoountID :");
+        account.accountIDValidation();
 
 
+        System.out.println();
         List<Employee> employee = new ArrayList<Employee>();
         Employee employee1 = new Employee("John", " Mathew ", new Location("Neenah", "USA", "34444444443"), "Process Executive", 567777);
         employee.add(employee1);
         employee1.setLocation(new Location("Neenah", "USA", "34444444443"));
-        System.out.println("Employee Fullname :" + employee1.getFullNAME());
-        System.out.println("Employee Position : " + employee1.getPosition());
-        System.out.println(employee1.generateEmailAddress("Hailey", "Natahn"));
+        logger.info("Employee Fullname :" + employee1.getFullNAME());
+        logger.info("Employee Position : " + employee1.getPosition());
+        System.out.println("  Employee email: " + employee1.generateEmailAddress("John", "Mathew"));
 
 
         ArrayList<Location> locations = new ArrayList<Location>();
-        Location location = new Location("Chennai", " India ", " 345559999 ");
+        Location location = new Location(" Mckinney ", " Texas ", " 345559999 ");
         System.out.println("Bank Location info :" + location.getLocationInfo() + location.getPhonenumber());
 
 
@@ -68,11 +94,6 @@ public class Main {
         CheckingAccount checkingAccount = new CheckingAccount("12333", 34444, 500);
         checkingAccount.getOverdraftlimit();
 
-
-        PersonalLoan personalLoan = new PersonalLoan("Chase", 7980, 1.7);
-        personalLoan.calculateInterest();
-
-
         try {
             SavingsAccount savingsAccount1 = new SavingsAccount("133444", 50000, 400);
             savingsAccount1.withdraw(800000);
@@ -82,7 +103,7 @@ public class Main {
 
 
         } catch (InsufficientFundException e) {
-            logger.warn("Error " + e.getMessage());
+            logger.warn("Error : " + e.getMessage());
         }
 
         try {
@@ -94,7 +115,7 @@ public class Main {
 
 
         } catch (NegativeAmountException e) {
-            logger.warn("Error " + e.getMessage());
+            logger.warn("Error :" + e.getMessage());
         }
         try {
             SavingsAccount savingsAccount3 = new SavingsAccount("-10032", 50000, 400);
@@ -104,7 +125,7 @@ public class Main {
             }
 
         } catch (AccountNotFoundException e) {
-            logger.warn("Error " + e.getMessage());
+            logger.warn("Error :" + e.getMessage());
         }
         try {
             SavingsAccount savingsAccount4 = new SavingsAccount("-10032", 50000, 400);
@@ -117,24 +138,20 @@ public class Main {
             logger.warn("Error " + e.getMessage());
         }
 
+        logger.info("Currency Accepted :" + Currency.EUR);
+        logger.info("Currency Accepted :" + Currency.USD);
+        logger.info("Currency Accepted :" + Currency.INR);
+
 
         BankOperations.depositOperation.accept(3000.6);
         BankOperations.generateTransactionID.get();
+        logger.info("Transaction status :" + TransactionStatus.COMPLETED + LocalDate.now() + LocalTime.now());
+
         BankOperations.calucalateInterest.apply(5.7);
         BankOperations.withDrawalOperation.accept(500.0);
+        BankOperations.generateTransactionID.get();
         BankOperations.getCurrentBalance.get();
-
-        System.out.println("Currency Accepted :" + Currency.EUR);
-        System.out.println("Currency Accepted :" + Currency.USD);
-        System.out.println("Currency Accepted :" + Currency.INR);
-
-        System.out.println("Transaction status :" + TransactionStatus.COMPLETED);
-
-        System.out.println(LoanStatus.APPROVED.loanStatusInfo());
-        System.out.println(LoanStatus.PENDING.loanStatusInfo());
-        System.out.println(LoanStatus.REJECTED.loanStatusInfo());
-
-        System.out.println("Transaction Card Type :" + CardType.CREDIT);
+        logger.info("Transaction status :" + TransactionStatus.PENDING + LocalDate.now() + LocalTime.now());
 
 
         CreditCardApprovalFunction<Double> CreditApproval = creditScore ->
@@ -146,16 +163,55 @@ public class Main {
 
         LoanEligibiltyFunction<Double> loanEligibilty = (income, CreditScore) ->
                 income > 50000 && CreditScore >= 650;
+
         double customerIncome = 60000;
         double customerCreditScore = 200;
         System.out.println("Loan Eligibility :" + loanEligibilty.checkLoanEligibility(customerIncome, customerCreditScore));
+        System.out.println(LoanStatus.REJECTED.loanStatusInfo());
+
 
         TransactionApprovalFunction<Double> transactionApproval = amount -> amount <= 10000;
         double transactionAmount = 300000;
+        System.out.println("Transaction Card Type :" + CardType.CREDIT);
         System.out.println("Transaction Approval :" + transactionApproval.approveTransaction(transactionAmount));
 
 
+        String filepath = "src/main/resources/2.txt";
+        List<Account> accountList = new ArrayList<>();
+        List<Account> highBalanceCustomer = (List<Account>) accountList.stream().filter(account1 -> account1.getBalance() > 1000).collect(Collectors.toList());
+        accountList.forEach(account1 -> System.out.println("Account Balance greater than 100" + account1.getAccountID()));
+
+        List<Double> uniqueBalance = accountList.stream().map(Account::getBalance).distinct().collect(Collectors.toList());
+
+        boolean accountBalanceover100000 = accountList.stream().anyMatch(account1 -> account1.getBalance() > 100000);
+
+        double numberofAccounts = accountList.stream().count();
+
+
     }
+
+
+    private static List<Account> readFile(String filepath) {
+        List<Account> accountList = null;
+        try
+                (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+            accountList = reader.lines().map(line -> {
+                String[]
+                        accounntDetails = line.split(",");
+                String accountID = accounntDetails[0];
+                double balance = Double.parseDouble(accounntDetails[1]);
+                double amount = 0;
+                return new Account(accountID, balance, amount);
+            }).collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return accountList;
+
+
+    }
+
+
 }
 
 
