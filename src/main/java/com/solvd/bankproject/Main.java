@@ -22,6 +22,7 @@ import com.solvd.bankproject.person.Employee;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalTime;
 
@@ -30,10 +31,7 @@ import org.apache.log4j.Logger;
 
 import java.time.LocalDate;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -176,7 +174,6 @@ public class Main {
         System.out.println("Transaction Approval :" + transactionApproval.approveTransaction(transactionAmount));
 
 
-        String filepath = "src/main/resources/2.txt";
         List<Account> accountList = new ArrayList<>();
         List<Account> highBalanceCustomer = (List<Account>) accountList.stream().filter(account1 -> account1.getBalance() > 1000).collect(Collectors.toList());
         accountList.forEach(account1 -> System.out.println("Account Balance greater than 100" + account1.getAccountID()));
@@ -188,25 +185,23 @@ public class Main {
         double numberofAccounts = accountList.stream().count();
 
 
-    }
+        String filepath = "src/main/resources/addaccount.txt";
+        Scanner scanner = new Scanner(System.in);
+        logger.info("Enter Customer Name");
+        String customerName = scanner.nextLine();
+        logger.info("Enter account number");
+        String accountID = scanner.nextLine();
+        System.out.println("Enter initial balance");
+        double initialBalance = scanner.nextDouble();
 
-
-    private static List<Account> readFile(String filepath) {
-        List<Account> accountList = null;
-        try
-                (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-            accountList = reader.lines().map(line -> {
-                String[]
-                        accounntDetails = line.split(",");
-                String accountID = accounntDetails[0];
-                double balance = Double.parseDouble(accounntDetails[1]);
-                double amount = 0;
-                return new Account(accountID, balance, amount);
-            }).collect(Collectors.toList());
+        try (FileWriter fileWriter = new FileWriter(filepath, true)) {
+            fileWriter.write(customerName + ", " + initialBalance + "\n");
+            logger.info("Account added succesfully");
         } catch (IOException e) {
+            System.out.println("Error in adding account to the file");
             e.printStackTrace();
         }
-        return accountList;
+        ;
 
 
     }
