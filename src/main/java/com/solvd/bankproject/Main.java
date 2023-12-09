@@ -46,7 +46,7 @@ public class Main {
 
         System.out.println();
         BankName bankNames1 = new BankName("Chase");
-        bankNames1.getName();
+
         bankNames1.WelcomeMessage();
 
 
