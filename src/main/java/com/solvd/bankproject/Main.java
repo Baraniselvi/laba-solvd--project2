@@ -179,10 +179,17 @@ public class Main {
         accountList.forEach(account1 -> System.out.println("Account Balance greater than 100" + account1.getAccountID()));
 
         List<Double> uniqueBalance = accountList.stream().map(Account::getBalance).distinct().collect(Collectors.toList());
+        System.out.println(uniqueBalance);
+        accountList.forEach(account1 -> System.out.println("Account details " + account1.getBalance()));
 
         boolean accountBalanceover100000 = accountList.stream().anyMatch(account1 -> account1.getBalance() > 100000);
+        System.out.println(accountBalanceover100000);
+        accountList.forEach(account1 -> System.out.println("Customer with balance over 100000" + account1.getBalance()));
 
         double numberofAccounts = accountList.stream().count();
+        System.out.println(numberofAccounts);
+        accountList.forEach(account1 -> System.out.println("Number of accounts"+ account1.getAccountID()));
+
 
 
         String filepath = "src/main/resources/addaccount.txt";

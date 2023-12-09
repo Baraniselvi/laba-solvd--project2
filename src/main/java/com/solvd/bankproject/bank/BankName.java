@@ -1,18 +1,19 @@
 package com.solvd.bankproject.bank;
 
 public class BankName {
-    private String name;
+    private String
+            bankName;
 
-    public BankName(String name) {
-        this.name = name;
+    public BankName(String bankName) {
+        this.bankName = bankName;
     }
 
-    public String getName() {
-        return name;
+    public String getBankName() {
+        return bankName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
     }
 
     public final void WelcomeMessage() {
